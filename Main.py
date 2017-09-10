@@ -19,21 +19,25 @@ def main():
             print("Unknown operation.")
 
     if operation == "+":
-        print("{} + {} = {} ".format(first_number, second_number, add_numbers()))
+        print("{} + {} = {:.2} ".format(first_number, second_number, add_numbers()))
     elif operation == "-":
-        print("{} - {} = {} ".format(first_number, second_number, subtract_numbers()))
+        print("{} - {} = {:.2} ".format(first_number, second_number, subtract_numbers()))
     elif operation == "*":
-        print("{} * {} = {} ".format(first_number, second_number, multiply_numbers()))
+        print("{} * {} = {:.2} ".format(first_number, second_number, multiply_numbers()))
+    elif operation == "/":
+        print("{} / {} = {:.2} ".format(first_number, second_number, divide_numbers()))
 
 def add_numbers():
     return int(first_number) + int(second_number)
-
 
 def subtract_numbers():
     return int(first_number) - int(second_number)
 
 def multiply_numbers():
     return int(first_number) * int(second_number)
+
+def divide_numbers():
+    return int(first_number) / int(second_number)
 
 def show_commands():
     print()

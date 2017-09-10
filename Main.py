@@ -19,13 +19,15 @@ def main():
             print("Unknown operation.")
 
     if operation == "+":
-        print("{} + {} = {:.2} ".format(first_number, second_number, add_numbers()))
+        print("{} + {} = {} ".format(first_number, second_number, add_numbers()))
     elif operation == "-":
-        print("{} - {} = {:.2} ".format(first_number, second_number, subtract_numbers()))
+        print("{} - {} = {} ".format(first_number, second_number, subtract_numbers()))
     elif operation == "*":
-        print("{} * {} = {:.2} ".format(first_number, second_number, multiply_numbers()))
+        print("{} * {} = {} ".format(first_number, second_number, multiply_numbers()))
     elif operation == "/":
         print("{} / {} = {:.2} ".format(first_number, second_number, divide_numbers()))
+    elif operation == "%":
+        print("{} % {} = {} ".format(first_number, second_number, remaining_numbers()))
 
 def add_numbers():
     return int(first_number) + int(second_number)
@@ -39,6 +41,9 @@ def multiply_numbers():
 def divide_numbers():
     return int(first_number) / int(second_number)
 
+def remaining_numbers():
+    return int(first_number) % int(second_number)
+
 def show_commands():
     print()
     print("Format your questions in the following way")
@@ -46,7 +51,9 @@ def show_commands():
     print("Example: 5 + 3")
     print()
     print("You can do the following operations:")
-    print("Add")
-    print("Subtract")
-    print("Multiply")
+    print("Add: +")
+    print("Subtract: -")
+    print("Multiply: *")
+    print("Divide: /")
+    print("Modulus: %")
 main()

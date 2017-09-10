@@ -5,10 +5,13 @@ second_number = ""
 def main():
     print("CMDCalc Alpha.")
     print("Type 'help' for a list of commands.")
+    print("Type 'quit' to quit.")
     command = input("Enter a calculation: ")
 
     if command.lower() == "help":
         show_commands()
+    elif command.lower() == "quit":
+        exit()
     else:
         try:
             global first_number
@@ -56,4 +59,7 @@ def show_commands():
     print("Multiply: *")
     print("Divide: /")
     print("Modulus: %")
-main()
+
+while True:
+    main()
+    print()

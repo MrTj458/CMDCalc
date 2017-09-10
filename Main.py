@@ -22,6 +22,8 @@ def main():
         print("{} + {} = {} ".format(first_number, second_number, add_numbers()))
     elif operation == "-":
         print("{} - {} = {} ".format(first_number, second_number, subtract_numbers()))
+    elif operation == "*":
+        print("{} * {} = {} ".format(first_number, second_number, multiply_numbers()))
 
 def add_numbers():
     return int(first_number) + int(second_number)
@@ -29,6 +31,9 @@ def add_numbers():
 
 def subtract_numbers():
     return int(first_number) - int(second_number)
+
+def multiply_numbers():
+    return int(first_number) * int(second_number)
 
 def show_commands():
     print()
@@ -39,4 +44,5 @@ def show_commands():
     print("You can do the following operations:")
     print("Add")
     print("Subtract")
+    print("Multiply")
 main()

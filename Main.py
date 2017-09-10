@@ -42,7 +42,12 @@ def multiply_numbers():
     return int(first_number) * int(second_number)
 
 def divide_numbers():
-    return int(first_number) / int(second_number)
+    try:
+        answer = int(first_number) / int(second_number)
+        return answer
+    except ZeroDivisionError:
+        print("Can't divide by zero.")
+        return 0.0
 
 def remaining_numbers():
     return int(first_number) % int(second_number)

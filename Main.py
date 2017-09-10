@@ -22,35 +22,35 @@ def main():
             print("Unknown operation.")
 
     if operation == "+":
-        print("{} + {} = {} ".format(first_number, second_number, add_numbers()))
+        print("{} + {} = {:.2} ".format(first_number, second_number, add_numbers()))
     elif operation == "-":
-        print("{} - {} = {} ".format(first_number, second_number, subtract_numbers()))
+        print("{} - {} = {:.2} ".format(first_number, second_number, subtract_numbers()))
     elif operation == "*":
-        print("{} * {} = {} ".format(first_number, second_number, multiply_numbers()))
+        print("{} * {} = {:.2} ".format(first_number, second_number, multiply_numbers()))
     elif operation == "/":
         print("{} / {} = {:.2} ".format(first_number, second_number, divide_numbers()))
     elif operation == "%":
-        print("{} % {} = {} ".format(first_number, second_number, remaining_numbers()))
+        print("{} % {} = {:.2} ".format(first_number, second_number, remaining_numbers()))
 
 def add_numbers():
-    return int(first_number) + int(second_number)
+    return float(first_number) + float(second_number)
 
 def subtract_numbers():
-    return int(first_number) - int(second_number)
+    return float(first_number) - float(second_number)
 
 def multiply_numbers():
-    return int(first_number) * int(second_number)
+    return float(first_number) * float(second_number)
 
 def divide_numbers():
     try:
-        answer = int(first_number) / int(second_number)
+        answer = float(first_number) / float(second_number)
         return answer
     except ZeroDivisionError:
         print("Can't divide by zero.")
         return 0.0
 
 def remaining_numbers():
-    return int(first_number) % int(second_number)
+    return float(first_number) % float(second_number)
 
 def show_commands():
     print()
